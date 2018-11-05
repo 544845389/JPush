@@ -2,7 +2,7 @@ package com.codingapi.push.server.service;
 
 import java.util.Map;
 
-public interface PushService {
+public interface Push {
 
 
 
@@ -20,7 +20,7 @@ public interface PushService {
      * @param content
      * @return
      */
-    int sendPushTag(String content , String tag);
+    int sendPushTag(String content, String tag);
 
 
     /**
@@ -57,7 +57,7 @@ public interface PushService {
      * @param alias
      * @return
      */
-    int sendPushMapAlias(String content, String alias ,  Map<String,String> map);
+    int sendPushMapAlias(String content, String alias, Map<String, String> map);
 
 
     /**

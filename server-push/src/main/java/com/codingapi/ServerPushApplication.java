@@ -1,7 +1,9 @@
 package com.codingapi;
 
+import com.codingapi.push.server.utils.BeanUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ServerPushApplication {
@@ -11,6 +13,10 @@ public class ServerPushApplication {
 	}
 
 
+	@Bean
+	public BeanUtil springUtil() {
+		return new BeanUtil();
+	}
 
 
 }

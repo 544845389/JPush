@@ -11,23 +11,22 @@ import cn.jpush.api.push.model.notification.AndroidNotification;
 import cn.jpush.api.push.model.notification.IosNotification;
 import cn.jpush.api.push.model.notification.Notification;
 import com.codingapi.push.server.config.JPushConfig;
-import com.codingapi.push.server.service.PushService;
+import com.codingapi.push.server.service.Push;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
-
-@Service
-public class PushServiceImpl implements PushService {
+@Service("jPush")
+public class JPush implements Push {
 
 
     @Autowired
     private JPushConfig  jPushConfig;
 
 
-    private Logger logger = LoggerFactory.getLogger(PushServiceImpl.class);
+    private Logger logger = LoggerFactory.getLogger(JPush.class);
 
 
     @Override
