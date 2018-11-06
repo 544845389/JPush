@@ -1,9 +1,7 @@
-package com.codingapi.push.server.contorller.service;
+package com.codingapi.push.server.api.service;
 
 import com.codingapi.push.server.model.*;
 import org.springframework.web.bind.annotation.RequestBody;
-
-import java.util.Map;
 
 public interface PushService {
 
@@ -68,7 +66,7 @@ public interface PushService {
      * @param
      * @return
      */
-    int sendPushMapAliasThrough(PushAliasMapTHroughReq pushAliasMapTHroughReq);
+    int sendPushMapAliasThrough(PushAliasMapThroughReq pushAliasMapTHroughReq);
 
 
 

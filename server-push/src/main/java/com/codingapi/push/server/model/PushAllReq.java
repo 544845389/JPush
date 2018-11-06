@@ -6,7 +6,10 @@ public class PushAllReq {
     private  String content;
 
 
-    private  String platform;
+    /**
+     * 推送方式  极光/其他。。。
+     */
+    private  String way;
 
 
     public String getContent() {
@@ -17,11 +20,11 @@ public class PushAllReq {
         this.content = content;
     }
 
-    public String getPlatform() {
-        return platform;
+    public String getWay() {
+        return way;
     }
 
-    public void setPlatform(String platform) {
-        this.platform = platform;
+    public void setWay(String way) {
+        this.way = way;
     }
 }

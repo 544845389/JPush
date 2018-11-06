@@ -1,10 +1,19 @@
-package com.codingapi.push.server.contorller;
+package com.codingapi.push.server.api.contorller;
 
-import com.codingapi.push.server.contorller.service.PushService;
+import com.codingapi.push.server.api.service.PushService;
 import com.codingapi.push.server.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author 侯存路
+ * @date 2018/11/6
+ * @company codingApi
+ * @description  推送 api
+ */
 @RestController
 @RequestMapping("push")
 public class PushController {
@@ -52,7 +61,7 @@ public class PushController {
 
 
     @PostMapping("/sendPushMapAliasThrough")
-    public  int sendPushMapAliasThrough(@RequestBody PushAliasMapTHroughReq pushAliasMapTHroughReq){
+    public  int sendPushMapAliasThrough(@RequestBody PushAliasMapThroughReq pushAliasMapTHroughReq){
         return pushService.sendPushMapAliasThrough(pushAliasMapTHroughReq);
     }
 

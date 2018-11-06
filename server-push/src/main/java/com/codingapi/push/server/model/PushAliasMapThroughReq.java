@@ -2,7 +2,7 @@ package com.codingapi.push.server.model;
 
 import java.util.Map;
 
-public class PushAliasMapTHroughReq {
+public class PushAliasMapThroughReq {
 
     private  String content;
 
@@ -12,14 +12,17 @@ public class PushAliasMapTHroughReq {
 
     private Map<String,String> map;
 
-    private  String platform;
+    /**
+     * 推送方式  极光/其他。。。
+     */
+    private  String way;
 
-    public String getPlatform() {
-        return platform;
+    public String getWay() {
+        return way;
     }
 
-    public void setPlatform(String platform) {
-        this.platform = platform;
+    public void setWay(String way) {
+        this.way = way;
     }
 
     public Map<String, String> getMap() {

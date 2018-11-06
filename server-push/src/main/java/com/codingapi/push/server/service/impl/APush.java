@@ -10,7 +10,6 @@ public class APush implements Push {
 
     @Override
     public int sendAll(String content) {
-        System.out.println("这是另一个推送");
         return 0;
     }
 
