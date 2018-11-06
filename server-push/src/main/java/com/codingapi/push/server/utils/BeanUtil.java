@@ -10,8 +10,8 @@ public class BeanUtil implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        if (this.applicationContext == null) {
-            this.applicationContext = applicationContext;
+        if (BeanUtil.applicationContext == null) {
+            BeanUtil.applicationContext = applicationContext;
         }
     }
 

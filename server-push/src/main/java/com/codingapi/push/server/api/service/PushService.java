@@ -1,6 +1,6 @@
 package com.codingapi.push.server.api.service;
 
-import com.codingapi.push.server.model.*;
+import com.codingapi.push.server.ao.*;
 import org.springframework.web.bind.annotation.RequestBody;
 
 public interface PushService {

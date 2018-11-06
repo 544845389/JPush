@@ -1,12 +1,16 @@
 package com.codingapi.push.server.api.contorller;
 
+import com.alibaba.fastjson.JSON;
 import com.codingapi.push.server.api.service.PushService;
-import com.codingapi.push.server.model.*;
+import com.codingapi.push.server.ao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 侯存路
@@ -38,6 +42,20 @@ public class PushController {
     @PostMapping("/sendPushMapTag")
     public  int sendPushMapTag(@RequestBody PushTagMapReq pushTagMapReq){
         return pushService.sendPushMapTag(pushTagMapReq);
+    }
+
+
+    public static void main(String[] args) {
+        Map<String,String> map = new HashMap<>();
+        map.put("name","名字");
+        map.put("value","值");
+
+        PushTagMapReq pushTagMapReq = new PushTagMapReq();
+        pushTagMapReq.setApplicationId(1);
+        pushTagMapReq.setContent("123");
+        pushTagMapReq.setMap(map);
+        pushTagMapReq.setTag("tag");
+        System.out.println("JSON = " + JSON.toJSONString(pushTagMapReq));
     }
 
 

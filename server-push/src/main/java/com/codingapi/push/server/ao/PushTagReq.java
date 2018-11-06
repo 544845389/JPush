@@ -1,4 +1,4 @@
-package com.codingapi.push.server.model;
+package com.codingapi.push.server.ao;
 
 
 public class PushTagReq {
@@ -10,9 +10,9 @@ public class PushTagReq {
 
 
     /**
-     * 推送方式  极光/其他。。。
+     * 应用id
      */
-    private  String way;
+    private  int applicationId;
 
 
     public String getContent() {
@@ -31,11 +31,11 @@ public class PushTagReq {
         this.tag = tag;
     }
 
-    public String getWay() {
-        return way;
+    public int getApplicationId() {
+        return applicationId;
     }
 
-    public void setWay(String way) {
-        this.way = way;
+    public void setApplicationId(int applicationId) {
+        this.applicationId = applicationId;
     }
 }
