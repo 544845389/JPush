@@ -45,18 +45,6 @@ public class PushController {
     }
 
 
-    public static void main(String[] args) {
-        Map<String,String> map = new HashMap<>();
-        map.put("name","名字");
-        map.put("value","值");
-
-        PushTagMapReq pushTagMapReq = new PushTagMapReq();
-        pushTagMapReq.setApplicationId(1);
-        pushTagMapReq.setContent("123");
-        pushTagMapReq.setMap(map);
-        pushTagMapReq.setTag("tag");
-        System.out.println("JSON = " + JSON.toJSONString(pushTagMapReq));
-    }
 
 
     @PostMapping("/sendPushMapTagThrough")
@@ -82,9 +70,6 @@ public class PushController {
     public  int sendPushMapAliasThrough(@RequestBody PushAliasMapThroughReq pushAliasMapTHroughReq){
         return pushService.sendPushMapAliasThrough(pushAliasMapTHroughReq);
     }
-
-
-
 
 
 
