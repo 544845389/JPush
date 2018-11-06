@@ -18,31 +18,31 @@ public class PushServiceImpl implements PushService {
 
     @Override
     public int sendPushTag(PushTagReq pushTagReq) {
-        return 0;
+        return PushFactory.createPush(pushTagReq.getPlatform()).sendPushTag(pushTagReq.getContent() ,pushTagReq.getTag());
     }
 
     @Override
     public int sendPushMapTag(PushTagMapReq pushTagMapReq) {
-        return 0;
+        return PushFactory.createPush(pushTagMapReq.getPlatform()).sendPushMapTag(pushTagMapReq.getContent() ,pushTagMapReq.getTag() , pushTagMapReq.getMap());
     }
 
     @Override
     public int sendPushMapTagThrough(PushTagThroughReq pushTagThroughReq) {
-        return 0;
+        return PushFactory.createPush(pushTagThroughReq.getPlatform()).sendPushMapTagThrough(pushTagThroughReq.getContent() ,pushTagThroughReq.getTag() , pushTagThroughReq.getMap());
     }
 
     @Override
     public int sendPushAlias(PushAliasReq pushAliasReq) {
-        return 0;
+        return PushFactory.createPush(pushAliasReq.getPlatform()).sendPushAlias(pushAliasReq.getContent() ,pushAliasReq.getAlias());
     }
 
     @Override
     public int sendPushMapAlias(PushAliasMapReq pushAliasMapReq) {
-        return 0;
+        return PushFactory.createPush(pushAliasMapReq.getPlatform()).sendPushMapAlias(pushAliasMapReq.getContent() ,pushAliasMapReq.getAlias() , pushAliasMapReq.getMap());
     }
 
     @Override
     public int sendPushMapAliasThrough(PushAliasMapTHroughReq pushAliasMapTHroughReq) {
-        return 0;
+        return PushFactory.createPush(pushAliasMapTHroughReq.getPlatform()).sendPushMapAliasThrough(pushAliasMapTHroughReq.getContent() ,pushAliasMapTHroughReq.getAlias() , pushAliasMapTHroughReq.getMap());
     }
 }

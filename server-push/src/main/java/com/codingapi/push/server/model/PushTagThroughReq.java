@@ -12,6 +12,18 @@ public class PushTagThroughReq {
 
     private Map<String,String> map;
 
+
+    private  String platform;
+
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
     public String getContent() {
         return content;
     }

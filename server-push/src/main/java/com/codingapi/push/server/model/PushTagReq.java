@@ -9,6 +9,9 @@ public class PushTagReq {
     private  String tag;
 
 
+    private  String platform;
+
+
     public String getContent() {
         return content;
     }
@@ -25,4 +28,11 @@ public class PushTagReq {
         this.tag = tag;
     }
 
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
 }
