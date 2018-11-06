@@ -9,6 +9,9 @@ package com.codingapi.push.server.entity;
 public enum Setting {
 
 
+    /**
+     * 1:开发环境 0:生产环境
+     */
     极光_推送环境("jPush_environment");
 
     private String state;

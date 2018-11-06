@@ -27,7 +27,7 @@ public class ApplicationSettingController {
      * 极光推送 参数配置
      * @param id
      * @param applicationId
-     * @param parameter
+     * @param parameter  必须填写 Setting 枚举中已存在的值
      * @param value
      * @return
      */
