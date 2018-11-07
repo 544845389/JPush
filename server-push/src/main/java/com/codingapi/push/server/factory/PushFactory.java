@@ -1,12 +1,12 @@
 package com.codingapi.push.server.factory;
 
 import com.codingapi.push.server.service.Push;
-import com.codingapi.push.server.utils.BeanUtil;
+import com.codingapi.push.server.helper.BeanHelper;
 
 public class PushFactory {
 
     public static Push  createPush(String type){
-        Push push =  (Push)BeanUtil.getBean(type);
+        Push push =  (Push) BeanHelper.getBean(type);
         return  push;
     }
 

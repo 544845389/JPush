@@ -1,6 +1,6 @@
 package com.codingapi;
 
-import com.codingapi.push.server.utils.BeanUtil;
+import com.codingapi.push.server.helper.BeanHelper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +14,8 @@ public class ServerPushApplication {
 
 
 	@Bean
-	public BeanUtil springUtil() {
-		return new BeanUtil();
+	public BeanHelper springUtil() {
+		return new BeanHelper();
 	}
 
 
