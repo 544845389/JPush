@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Starter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <!-- bootstrap3Validation -->
+    <link href="../plugins/bootstrap-validation/bootstrap-ie78.css" rel="stylesheet" type="text/css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
+</head>
+
+<body>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseOne">
+                        云端配置
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                 <label> 云端配置访问地址 </label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="gitUrl" type="text" class="form-control" value="" readonly="readonly"  />
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                <label> 访问账户 </label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="gitName" type="text" class="form-control" value=""  readonly="readonly" />
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                <label> 访问密码 </label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="gitPwd" type="text" class="form-control" value="" readonly="readonly" />
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseTwo">
+                        密钥配置
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <label> 密钥key </label>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="secretKey" type="text" class="form-control" value="" readonly="readonly" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <label> 加密地址 </label>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="encrypt" type="text" class="form-control" value="" readonly="readonly" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <label> 解密地址 </label>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="decrypt" type="text" class="form-control" value="" readonly="readonly" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#collapseThree">
+                       配置文件存放地址
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <label> 地址 </label>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="localUrl" type="text" class="form-control" value="" readonly="readonly" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/jQuery/jquery.blockUI.min.js"></script>
+    <script src="../plugins/jQuery/jquery.form.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="../dist/js/app.min.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- httpUtils -->
+    <script src="../js/httpUtils.js"></script>
+    <!-- hint -->
+    <script src="../js/hint.js"></script>
+    <!-- hint -->
+    <script src="../js/URL.js"></script>
+
+
+    <script>
+
+        $(function () {
+            var url = URL + findSetInfo;
+
+             // 加载基础配置信息
+            comment.post( url  , null , '执行中....', function (res) {
+                if(res != null && res != undefined){
+                    $("#gitUrl").val(res.url);
+                    $("#gitName").val(res.userName);
+                    $("#gitPwd").val(res.userPwd);
+
+                    $("#secretKey").val(res.secretKey);
+                    $("#encrypt").val(res.encrypt);
+                    $("#decrypt").val(res.decrypt);
+
+                    $("#localUrl").val(res.localUrl);
+
+                }
+            });
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

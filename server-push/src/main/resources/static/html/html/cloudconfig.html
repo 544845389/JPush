@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Starter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <!-- bootstrap3Validation -->
+    <link href="../plugins/bootstrap-validation/bootstrap-ie78.css" rel="stylesheet" type="text/css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
+</head>
+
+<body>
+
+
+<div class="container" style="height: 100%">
+
+    <div class="row" style="height: 40%"></div>
+
+    <div class="row" style="height: 20%;text-align: center;">
+        <button type="button" class="btn btn-primary btn-lg"   data-target="#downCloudConfig" data-to="modal" >下载云配置</button>
+    </div>
+
+    <div class="row" style="height: 40%"></div>
+
+
+
+
+
+</div>
+    <!--下载云配置 -->
+    <div class="modal-dialog modal-con" role="document" id='downCloudConfig'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">下载云配置</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="deleteRoleId" />
+                <div class="form-group has-success">
+                    <p class="text-danger" >注意：如果已下载过云配置 ， 该操作将会覆盖之前的配置文件内容。</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>&nbsp;
+                <button type="button" class="btn btn-primary" id="downCloudConfig-button">确定</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!-- Modal -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../plugins/jQuery/jquery.blockUI.min.js"></script>
+<script src="../plugins/jQuery/jquery.form.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+
+<!-- AdminLTE App -->
+<script src="../js/common.js"></script>
+<!-- httpUtils -->
+<script src="../js/httpUtils.js"></script>
+<!-- hint -->
+<script src="../js/hint.js"></script>
+<!-- hint -->
+<script src="../js/URL.js"></script>
+
+
+    <script src="./js/cloudconfig.js"></script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
