@@ -1,4 +1,4 @@
-package com.codingapi.push.server.api.contorller;
+package com.codingapi.push.server.api.contorller.wxpublic;
 
 import com.codingapi.push.server.api.service.ApplicationService;
 import com.codingapi.push.server.api.service.WxApplicationService;

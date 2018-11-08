@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author 侯存路
  * @date 2018/11/6
  * @company codingApi
- * @description  应用管理
+ * @description  应用设置
  */
 @RestController
 @RequestMapping("/applicationSetting")
