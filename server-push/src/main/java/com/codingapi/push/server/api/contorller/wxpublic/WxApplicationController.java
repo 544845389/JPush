@@ -1,6 +1,5 @@
 package com.codingapi.push.server.api.contorller.wxpublic;
 
-import com.codingapi.push.server.api.service.ApplicationService;
 import com.codingapi.push.server.api.service.WxApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
