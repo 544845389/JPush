@@ -1,4 +1,4 @@
-package com.codingapi.push.server.api.contorller.wxpublic;
+package com.codingapi.push.server.api.controller.wxpublic;
 
 import com.codingapi.push.server.ao.PushWxMsgByReq;
 import com.codingapi.push.server.ao.PushWxMsgMassReq;

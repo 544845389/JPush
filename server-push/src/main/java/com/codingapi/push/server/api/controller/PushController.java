@@ -1,16 +1,13 @@
-package com.codingapi.push.server.api.contorller;
+package com.codingapi.push.server.api.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.codingapi.push.server.api.service.PushService;
 import com.codingapi.push.server.ao.*;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author 侯存路
@@ -18,6 +15,7 @@ import java.util.Map;
  * @company codingApi
  * @description  推送 api
  */
+@Api(description = "推送 Api")
 @RestController
 @RequestMapping("push")
 public class PushController {

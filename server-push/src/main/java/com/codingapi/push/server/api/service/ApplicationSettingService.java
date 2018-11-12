@@ -16,5 +16,5 @@ public interface ApplicationSettingService {
      * @param value
      * @return
      */
-    int saveApplicationSetting(int id, int applicationId, String parameter, String value);
+    int saveApplicationSetting(int id, int applicationId, String parameter, String value , String info);
 }

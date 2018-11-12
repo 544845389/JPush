@@ -1,21 +1,27 @@
 package com.codingapi.push.server.ao;
 
-import java.util.Map;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Map;
+@ApiModel
 public class PushTagMapReq {
 
+
+    @ApiModelProperty(value = "推送内容")
     private  String content;
 
-
+    @ApiModelProperty(value = "推送标签")
     private  String tag;
 
-
+    @ApiModelProperty(value = "推送Map数据")
     private Map<String,String> map;
 
 
     /**
      * 应用id
      */
+    @ApiModelProperty(value = "推送应用Id")
     private  int applicationId;
 
     public int getApplicationId() {

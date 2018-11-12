@@ -21,12 +21,13 @@ public class ApplicationSettingServiceImpl implements ApplicationSettingService 
 
 
     @Override
-    public int saveApplicationSetting(int id, int applicationId, String parameter, String value) {
+    public int saveApplicationSetting(int id, int applicationId, String parameter, String value , String info) {
         ApplicationSetting applicationSetting = new ApplicationSetting();
         applicationSetting.setId(id);
         applicationSetting.setApplicationId(applicationId);
         applicationSetting.setParameter(parameter);
         applicationSetting.setValue(value);
+        applicationSetting.setInfo(info);
         applicationSettingRepository.index(applicationSetting);
         return 1;
     }

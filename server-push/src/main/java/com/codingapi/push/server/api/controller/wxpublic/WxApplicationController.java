@@ -1,4 +1,4 @@
-package com.codingapi.push.server.api.contorller.wxpublic;
+package com.codingapi.push.server.api.controller.wxpublic;
 
 import com.codingapi.push.server.api.service.WxApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
