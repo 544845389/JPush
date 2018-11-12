@@ -21,7 +21,7 @@ public class WxApplicationServiceImpl implements WxApplicationService {
 
 
     @Override
-    public int saveWxApplication(int id, String name, String appId, String secret) {
+    public int saveOrWxApplication(int id, String name, String appId, String secret) {
         WxApplication  wxApplication = new WxApplication();
         wxApplication.setId(id);
         wxApplication.setAppId(appId);
@@ -33,6 +33,11 @@ public class WxApplicationServiceImpl implements WxApplicationService {
 
 
 
+    @Override
+    public int deleteWxApplication(int id) {
+        wxApplicationRepository.deleteById(id);
+        return 1;
+    }
 
 
 }

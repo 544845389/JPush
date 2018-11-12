@@ -17,5 +17,13 @@ public interface WxApplicationService {
      * @param secret
      * @return
      */
-    int saveWxApplication(int id, String name, String appId, String secret);
+    int saveOrWxApplication(int id, String name, String appId, String secret);
+
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    int deleteWxApplication(int id);
 }

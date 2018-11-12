@@ -23,15 +23,21 @@ public class WxApplicationController {
 
 
 
-    @GetMapping("/saveWxApplication")
-    public  int saveWxApplication(
+    @GetMapping("/saveOrWxApplication")
+    public  int saveOrWxApplication(
             @RequestParam("id") int id,
             @RequestParam("name") String name,
             @RequestParam("appId") String appId,
             @RequestParam("secret") String secret ){
-        return wxApplicationService.saveWxApplication(id , name , appId , secret );
+        return wxApplicationService.saveOrWxApplication(id , name , appId , secret );
     }
 
+
+    @GetMapping("/deleteWxApplication")
+    public  int deleteWxApplication(
+            @RequestParam("id") int id){
+        return wxApplicationService.deleteWxApplication(id);
+    }
 
 
 

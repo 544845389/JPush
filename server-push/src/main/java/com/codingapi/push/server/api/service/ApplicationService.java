@@ -1,7 +1,9 @@
 package com.codingapi.push.server.api.service;
 
 import com.codingapi.push.server.ao.GetApplicationTypeListRes;
+import com.codingapi.push.server.entity.Application;
 import com.lorne.core.framework.exception.ServiceException;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -21,7 +23,7 @@ public interface ApplicationService {
      * @param secret
      * @return
      */
-    int saveApplication(int id ,String name, String key, String secret , String type) throws ServiceException;
+    int saveApplication(int id ,String name, String key, String secret , String type) ;
 
 
     /**
@@ -29,4 +31,29 @@ public interface ApplicationService {
      * @return
      */
     List<GetApplicationTypeListRes> getApplicationTypeList();
+
+
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    int deleteApplication(int id);
+
+
+    /**
+     * 查询
+     * @param nowPage
+     * @param pageSize
+     * @return
+     */
+    Page<Application> findList(int nowPage, int pageSize);
+
+    /**
+     * 保存应用设置
+     * @param
+     * @return
+     */
+    int saveApplicationSetting(int applicationId);
 }
