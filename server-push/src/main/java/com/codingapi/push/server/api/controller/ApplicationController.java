@@ -97,10 +97,11 @@ public class ApplicationController {
     @ApiOperation( value= "获取应用列表")
     @GetMapping("/findList")
     public Page<Application> findList(
+            @ApiParam("应用类型")  @RequestParam("type") String type,
             @ApiParam("当前页")  @RequestParam("nowPage") int nowPage,
             @ApiParam("条数") @RequestParam("pageSize") int pageSize
     ) {
-        return applicationService.findList(nowPage ,pageSize );
+        return applicationService.findList(nowPage ,pageSize , type);
     }
 
 

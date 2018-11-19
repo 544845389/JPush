@@ -1,5 +1,8 @@
 package com.codingapi.push.server.api.service;
 
+import com.codingapi.push.server.entity.WxApplication;
+import org.springframework.data.domain.Page;
+
 /**
  * @author 侯存路
  * @date 2018/11/6
@@ -26,4 +29,11 @@ public interface WxApplicationService {
      * @return
      */
     int deleteWxApplication(int id);
+
+
+    /**
+     * 查询 所有微信应用
+     * @return
+     */
+    Page<WxApplication> findWxApplicationList();
 }

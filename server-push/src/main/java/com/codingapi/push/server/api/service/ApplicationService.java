@@ -48,7 +48,7 @@ public interface ApplicationService {
      * @param pageSize
      * @return
      */
-    Page<Application> findList(int nowPage, int pageSize);
+    Page<Application> findList(int nowPage, int pageSize , String type);
 
     /**
      * 保存应用设置

@@ -7,6 +7,9 @@ import com.codingapi.push.server.dao.ApplicationSettingRepository;
 import com.codingapi.push.server.entity.Application;
 import com.codingapi.push.server.entity.ApplicationSetting;
 import com.codingapi.push.server.entity.Setting;
+import org.apache.commons.lang.StringUtils;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -47,9 +50,8 @@ public class ApplicationServiceImpl implements ApplicationService {
         application.setKey(key);
         application.setSecret(secret);
         application.setType(type);
-
         Application  sApplication =  applicationRepository.index(application);
-        return  sApplication == null ? 0 : 1;
+        return  application.getId();
     }
 
 
@@ -76,8 +78,15 @@ public class ApplicationServiceImpl implements ApplicationService {
 
 
     @Override
-    public Page<Application>  findList(int nowPage, int pageSize) {
-        Page<Application>  page = applicationRepository.findAll(PageRequest.of(nowPage , pageSize));
+    public Page<Application>  findList(int nowPage, int pageSize , String type) {
+        QueryBuilder queryBuilder = null;
+        if(StringUtils.isEmpty(type)){
+            queryBuilder = QueryBuilders.wildcardQuery("type", "**");
+        }else{
+            queryBuilder = QueryBuilders.matchQuery("type", type);
+        }
+
+        Page<Application>  page = applicationRepository.search(queryBuilder, PageRequest.of(nowPage , pageSize));
         return page;
     }
 
