@@ -7,11 +7,9 @@ import com.codingapi.push.server.dao.ApplicationSettingRepository;
 import com.codingapi.push.server.entity.Application;
 import com.codingapi.push.server.entity.ApplicationSetting;
 import com.codingapi.push.server.entity.Setting;
-import com.lorne.core.framework.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -38,9 +36,13 @@ public class ApplicationServiceImpl implements ApplicationService {
 
     @Override
     public int saveApplication(int id ,String name, String key, String secret , String type){
-
         Application  application = new Application();
-        application.setId(id);
+        int count  =  applicationRepository.findAll(PageRequest.of(0 , 1000)).getNumberOfElements();
+        if(id == 0){
+            application.setId(count+1);
+        }else{
+            application.setId(id);
+        }
         application.setName(name);
         application.setKey(key);
         application.setSecret(secret);

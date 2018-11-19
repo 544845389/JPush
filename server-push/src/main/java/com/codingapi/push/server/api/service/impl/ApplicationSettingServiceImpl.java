@@ -6,6 +6,8 @@ import com.codingapi.push.server.entity.ApplicationSetting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 侯存路
  * @date 2018/11/6
@@ -30,5 +32,23 @@ public class ApplicationSettingServiceImpl implements ApplicationSettingService 
         applicationSetting.setInfo(info);
         applicationSettingRepository.index(applicationSetting);
         return 1;
+    }
+
+
+
+    @Override
+    public int updateApplicationSetting(int id, String value) {
+        ApplicationSetting applicationSetting =  applicationSettingRepository.findById(id).get();
+        applicationSetting.setValue(value);
+        applicationSettingRepository.index(applicationSetting);
+        return 1;
+    }
+
+
+
+    @Override
+    public List<ApplicationSetting> findApplicationSettingByApplicationId(int id) {
+       List<ApplicationSetting> list =   applicationSettingRepository.findApplicationSettingByApplicationId(id);
+        return list;
     }
 }

@@ -27,3 +27,14 @@
 ### 获取应用列表
 获取应用列表 
 <api mapping="/application/findList" method="get"></api>
+
+
+
+### 极光推送 参数修改
+获取应用列表 
+<api mapping="/applicationSetting/updateApplicationSetting" method="get"></api>
+
+
+### 获取应用的参数设置列表
+获取应用列表 
+<api mapping="/applicationSetting/findApplicationSettingByApplicationId" method="get"></api>

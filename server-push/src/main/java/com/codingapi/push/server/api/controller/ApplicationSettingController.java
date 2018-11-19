@@ -1,6 +1,7 @@
 package com.codingapi.push.server.api.controller;
 
 import com.codingapi.push.server.api.service.ApplicationSettingService;
+import com.codingapi.push.server.entity.ApplicationSetting;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author 侯存路
@@ -46,7 +49,34 @@ public class ApplicationSettingController {
 
 
 
-    
+
+
+    /**
+     * 极光推送 参数配置
+     */
+    @GetMapping("/updateApplicationSetting")
+    public  int updateApplicationSetting(
+            @ApiParam("Id")  @RequestParam("id") int id,
+            @ApiParam("参数值") @RequestParam("value") String value ){
+        return applicationSettingService.updateApplicationSetting(id , value );
+    }
+
+
+
+
+    /**
+     * 获取应用的参数设置列表
+     */
+    @GetMapping("/findApplicationSettingByApplicationId")
+    public List<ApplicationSetting> findApplicationSettingByApplicationId(
+            @ApiParam("应用Id")
+            @RequestParam("ApplicationId") int id ){
+        return applicationSettingService.findApplicationSettingByApplicationId(id);
+    }
+
+
+
+
 
 
 }

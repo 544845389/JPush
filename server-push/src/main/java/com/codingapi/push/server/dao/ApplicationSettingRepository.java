@@ -5,6 +5,8 @@ import com.codingapi.push.server.entity.ApplicationSetting;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author 侯存路
  * @date 2018/11/6
@@ -19,6 +21,8 @@ public interface ApplicationSettingRepository extends ElasticsearchRepository<Ap
       ApplicationSetting findByApplicationIdAndParameter(int applicationId , String parameter);
 
 
+
+      List<ApplicationSetting> findApplicationSettingByApplicationId(int applicationId );
 
 
 }
