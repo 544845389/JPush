@@ -101,7 +101,7 @@ public class ApplicationServiceImpl implements ApplicationService {
         applicationSetting.setApplicationId(applicationId);
         applicationSetting.setValue("1");
         applicationSetting.setParameter(Setting.极光_推送环境.toString());
-        applicationSetting.setInfo("极光推送开发/生产环境配置");
+        applicationSetting.setInfo("0:生产环境/1:开发环境");
         list.add(applicationSetting);
 
         // todo 后续增加新的配置
